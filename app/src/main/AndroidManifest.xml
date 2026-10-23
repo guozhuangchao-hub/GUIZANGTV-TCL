@@ -1,0 +1,64 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- Development permission granted explicitly by the owner through ADB for opt-in guard only. -->
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" tools:ignore="ProtectedPermissions" />
+    <uses-feature android:name="android.software.leanback" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <queries>
+        <intent><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.HOME" /></intent>
+        <intent><action android:name="android.intent.action.VIEW" /><data android:scheme="content" android:host="android.media.tv" /></intent>
+        <package android:name="com.tianci.movieplatform" />
+        <intent><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent>
+        <intent><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LEANBACK_LAUNCHER" /></intent>
+        <package android:name="com.xiaomi.mitv.settings" />
+        <package android:name="com.xiaomi.mitv.tvplayer" />
+        <package android:name="com.mitv.tvhome" />
+        <package android:name="com.tcl.tv" />
+        <package android:name="com.tcl.settings" />
+        <package android:name="com.tcl.cyberui" />
+    </queries>
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher"
+        android:banner="@drawable/banner" android:theme="@style/Theme.GuiZangTV"
+        android:allowBackup="false" android:supportsRtl="true">
+        <receiver android:name=".InstallConfigReceiver" android:exported="true" android:permission="android.permission.WRITE_SECURE_SETTINGS">
+            <intent-filter><action android:name="io.github.op7418.guizangtv.CONFIG" /></intent-filter>
+        </receiver>
+        <service android:name=".TclHomeGuard" android:label="归藏桌面守护" android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter><action android:name="android.accessibilityservice.AccessibilityService" /></intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/tcl_home_guard" />
+        </service>
+        <service android:name=".TclHomeGuard$Revival" android:label="归藏桌面恢复" android:exported="true"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter><action android:name="android.service.notification.NotificationListenerService" /></intent-filter>
+        </service>
+        <activity android:name=".FrameHomeActivity" android:exported="true"
+            android:launchMode="singleTask" android:stateNotNeeded="true"
+            android:excludeFromRecents="true" android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden|uiMode"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".TclBootReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="tcl.sys.intent.action.STR_RESUME_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- Xiaomi's package-based startup hook resolves INFO before LAUNCHER.
+             Ordinary TV app-list entries still open FrameHomeActivity directly. -->
+        <activity android:name=".BootGateActivity" android:exported="true"
+            android:excludeFromRecents="true" android:noHistory="true" android:taskAffinity=""
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.INFO" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

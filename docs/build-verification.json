@@ -1,0 +1,22 @@
+{
+  "apk_manifest_and_signatures": [
+    {
+      "variant": "tcl",
+      "declares_home": false,
+      "certificate_sha256": "734209bf6d2abb6bf5c15cac6ef9ebbc82e31f505fbbeb684405ad295025a9e0",
+      "internet_permission": false
+    },
+    {
+      "variant": "standard",
+      "declares_home": true,
+      "certificate_sha256": "734209bf6d2abb6bf5c15cac6ef9ebbc82e31f505fbbeb684405ad295025a9e0",
+      "internet_permission": false
+    }
+  ],
+  "java_tests": 27,
+  "tv_accessed": false,
+  "gradle_lint": "Pending CI; local verification used SDK/JDK builder",
+  "python_installer_tests": 15,
+  "package_payloads_verified": 33,
+  "skill_validation": "PASS"
+}

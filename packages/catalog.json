@@ -1,0 +1,192 @@
+{
+  "schema": 1,
+  "artifacts": {
+    "launcher-tcl": {
+      "file": "packages/guizang-tv-tcl-0.4.0.apk",
+      "package": "io.github.op7418.guizangtv",
+      "label": "归藏电视 TCL版",
+      "version_code": 10,
+      "version_name": "0.4.0-tcl",
+      "min_sdk": 26,
+      "abis": [
+        "any"
+      ],
+      "home": false,
+      "license": "MIT and bundled asset licenses",
+      "sha256": "7cfe6eca7012b27e9c561dfe433e29832d691e9715b3939bea3eebcf922a67b6",
+      "signer_sha256": "734209bf6d2abb6bf5c15cac6ef9ebbc82e31f505fbbeb684405ad295025a9e0"
+    },
+    "launcher-standard": {
+      "file": "packages/guizang-tv-standard-0.4.0.apk",
+      "package": "io.github.op7418.guizangtv",
+      "label": "归藏电视",
+      "version_code": 10,
+      "version_name": "0.4.0-standard",
+      "min_sdk": 26,
+      "abis": [
+        "any"
+      ],
+      "home": true,
+      "license": "MIT and bundled asset licenses",
+      "sha256": "14b6b6ed9c08e1bde2536d6a36b2470c8dc2c4a83c64bb555d8e836815efbaef",
+      "signer_sha256": "734209bf6d2abb6bf5c15cac6ef9ebbc82e31f505fbbeb684405ad295025a9e0"
+    },
+    "xinmiao": {
+      "file": "packages/xinmiao-1.1.2.apk",
+      "package": "com.mygithub0.tvbox0.apei583",
+      "label": "新喵影视",
+      "version_code": 133,
+      "version_name": "1.1.2",
+      "min_sdk": 21,
+      "abis": [
+        "armeabi-v7a"
+      ],
+      "source": "User-provided original installed APK; no account/data copied",
+      "license": "Not verified; not relicensed under MIT",
+      "signer_sha256": "492682f877607ee99df2ddd2bd5953fd727bdf6e19d397de9dbbafd582bcad75",
+      "sha256": "60a283d1872ff7dc11e02a95fde8746ae876edb0c7d9a89b7e0fde1ab1602919"
+    },
+    "tvbox": {
+      "file": "packages/TVBox_q215613905_20260914-1520-java32.apk",
+      "package": "com.github.tvbox.osc.jun",
+      "label": "TVBox",
+      "version_code": 1,
+      "version_name": "20260914-1520",
+      "min_sdk": 19,
+      "abis": [
+        "armeabi-v7a"
+      ],
+      "source": "https://github.com/j4Uq/TVBoxOSC/releases/tag/20260914-1520",
+      "license": "Upstream AGPL-3.0; see licenses and corresponding source archive",
+      "sha256": "ba4fbd2e371e1a8e606766cd204c2b4b7581a046b3127dce1a5ce3bf02d5ab83"
+    }
+  },
+  "source_archives": [
+    {
+      "file": "packages/sourceCode-ab11d28.tar.xz",
+      "sha256": "302fbc04af0aa6bc3da3230b4ab14e6c93a7907da76de95d8841514d6becba8b",
+      "source": "same release as TVBox APK"
+    }
+  ],
+  "tvbox_config": {
+    "publisher": "https://github.com/jinenge/tvbox",
+    "revision": "fd551fc9cdedb4b130e4692972bf116bb08ffa57",
+    "sites": 42,
+    "origin": "https://jinenge.us.kg/app/tvbox/tvbox.json",
+    "note": "Valid first JSON object only; identical to publisher live JSON at capture. Local parser/plugin files retained unchanged. Some sites/channels are unavailable; no playback guarantee.",
+    "files": [
+      {
+        "file": "packages/tvbox-config/lib/0075389dca9afadd4614e9713765ff17.txt",
+        "sha256": "c7270ad05db2aefcc78bf257a58c7c6b8cc62bf735b0b16ffe965ede9b4acfea"
+      },
+      {
+        "file": "packages/tvbox-config/lib/3d75a78a0fc7ede372c03598d6d10367.m3u",
+        "sha256": "ea3ee5d7e0861c147b2c5fdb21c4887eec37d0fd8754a8d0fa9c974a1d7ab947"
+      },
+      {
+        "file": "packages/tvbox-config/lib/5af5fbe12a88b7c45aa1c21e6551826c.txt",
+        "sha256": "b96a6aa94b64ef29ff115b4ad590c41cd7b776ceab025ebbcf1fed7ec131bc12"
+      },
+      {
+        "file": "packages/tvbox-config/lib/6496356286589c68f52c2f99c0c674c7.txt",
+        "sha256": "f32bde4ace081623ce02d1e8fa4294f05c3cd776e68b4affb9e6df4c0aa313f0"
+      },
+      {
+        "file": "packages/tvbox-config/lib/89370c8ddf36b5e1beb4d71adb921bda.txt",
+        "sha256": "37ca0c5fa38589a8d89ea60af5fac54e55212df3bebcddbd406c83c0c62692e4"
+      },
+      {
+        "file": "packages/tvbox-config/lib/8f55d520f8d70056695740ef151744a7.txt",
+        "sha256": "92ae9af6b026347edbfdba9acacd29274368e7a3c7893f1fed03b4be5bcc2723"
+      },
+      {
+        "file": "packages/tvbox-config/lib/bililive.m3u",
+        "sha256": "224e90a79445fb42c7b26045d5725622ce8955e6d789052c05e9f898692b10e9"
+      },
+      {
+        "file": "packages/tvbox-config/lib/c66a4b5356141c49fd45ec51568017b4.txt",
+        "sha256": "e46ac2350b93b48d404ad5c3d0c23adf0129a7473a7ceeddfc968df0efa15456"
+      },
+      {
+        "file": "packages/tvbox-config/lib/cheerio.min.js",
+        "sha256": "b4a69e4925383dd19df67ef048639b2d7ef86f3b187e18b2471b405d9f9a19cd"
+      },
+      {
+        "file": "packages/tvbox-config/lib/crypto-js.js",
+        "sha256": "731c9606953ddedd5bafe52e32eeced73f2a3750fbdac3c812b4a04881e48c07"
+      },
+      {
+        "file": "packages/tvbox-config/lib/d7a21cf34ede56f5c686ecfba5fc7e3f.txt",
+        "sha256": "67d790e00bf115c96195bc81cf4f883257324bfbff4246f7696d01a1f09e5763"
+      },
+      {
+        "file": "packages/tvbox-config/lib/douyuyqk.m3u",
+        "sha256": "2f4a2ac8494f8dc371df0a35c577f527afcbc01b364f1b31f141ee5bfea48b69"
+      },
+      {
+        "file": "packages/tvbox-config/lib/drpy2.min.js",
+        "sha256": "1d1aabd7d3e03865fa74b060d8815d47975eea3de13bad766f84e9ac2df0b71f"
+      },
+      {
+        "file": "packages/tvbox-config/lib/gbk.js",
+        "sha256": "28097cea4538c34653cd1e2c39aef3ad5bc892caa54b0761105f26fa4a3a339a"
+      },
+      {
+        "file": "packages/tvbox-config/lib/huyayqk.m3u",
+        "sha256": "c0c4aff9b4528b27d8bbe8685578254192e28ed00dab43a963acec51b84e437a"
+      },
+      {
+        "file": "packages/tvbox-config/lib/interface.txt",
+        "sha256": "01f2d668bd8dc4aa00b6c57e5953a21632628ed31711bb52dea7f023aca83932"
+      },
+      {
+        "file": "packages/tvbox-config/lib/iptv.m3u",
+        "sha256": "fe39613aa9f9a0d384df909317ca3205f34dce36fd9b9cd9e4fc8f3066ae9f9f"
+      },
+      {
+        "file": "packages/tvbox-config/lib/jinenge.jar",
+        "sha256": "6e1fa28119ae69dbc45cf19f515c7298a1bc1a44066119061cd2d410b0d1bfbd"
+      },
+      {
+        "file": "packages/tvbox-config/lib/jinja.js",
+        "sha256": "6cf1781f0c32206236049d392383dbc558b530244926d93762dfa3362967bff2"
+      },
+      {
+        "file": "packages/tvbox-config/lib/json5.js",
+        "sha256": "1b3d54f76b9106641e540b6561dc950ffe281590f8546b88f26fc7a91c225e10"
+      },
+      {
+        "file": "packages/tvbox-config/lib/node-rsa.js",
+        "sha256": "b2e1d9c402ce06c19d08e1659624bfbbda91994d06339300970c395977e6d37c"
+      },
+      {
+        "file": "packages/tvbox-config/lib/pako.min.js",
+        "sha256": "7b7a3b8db4d7b65846b807f1309688a8955961dbde5538694862a6c5cbc932cf"
+      },
+      {
+        "file": "packages/tvbox-config/lib/yylunbo.m3u",
+        "sha256": "1c66584dd68a8d14cda7adedc565d0cd2f26579da4876a70a6cfa1a35e3ad022"
+      },
+      {
+        "file": "packages/tvbox-config/lib/兔小贝.js",
+        "sha256": "7173a949be786609d3c16cd02d9797889c6086a485aeff2f29bc77c602dc4676"
+      },
+      {
+        "file": "packages/tvbox-config/lib/斗鱼直播.js",
+        "sha256": "114a5ec86e6d48545ce0a99b1a5552380d735998737166e8fa3887479e04d64d"
+      },
+      {
+        "file": "packages/tvbox-config/lib/模板.js",
+        "sha256": "1da00bdcb30ab1a7875a84ee6fc82256e705330b6cc9d84144f163df68b665cb"
+      },
+      {
+        "file": "packages/tvbox-config/lib/虎牙.js",
+        "sha256": "efe1013ec759d66767d356f6769d79a697cb9ecdac44deb682a38b32f83e01fc"
+      },
+      {
+        "file": "packages/tvbox-config/tvbox.json",
+        "sha256": "08544c73c26ff1044cfc3b7b9a84a025a3ae2d76d25892ff3e3ccd39e4eb2e0f"
+      }
+    ]
+  }
+}

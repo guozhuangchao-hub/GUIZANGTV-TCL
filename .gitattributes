@@ -1,0 +1,4 @@
+# Keep third-party payload bytes (including original CRLF/minified data) unchanged.
+packages/*.apk binary
+packages/*.tar.xz binary
+packages/tvbox-config/lib/** -text -diff
